@@ -2,7 +2,7 @@ const fs = require("fs");
 
 const nexusDb = JSON.parse(fs.readFileSync("db.json"));
 
-fs.readdir("./large", (err, files) => {
+fs.readdir("./small", (err, files) => {
     let keys = Object.keys(nexusDb);
     let fileKeys = files.map(fileName => parseInt(fileName, 10).toString());
     
